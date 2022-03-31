@@ -18,14 +18,14 @@ interface Response {
 }
 
 app.get('/bmi', (req, res) => {
-  const weight: number = Number(req.query.weight);
-  const height: number = Number(req.query.height);
+  const weight = Number(req.query.weight);
+  const height = Number(req.query.height);
   const bmi: string = calculateBmi(weight, height);
   const response: Response = {
     weight,
     height,
     bmi
-  }
+  };
 
   console.log(height);
 
